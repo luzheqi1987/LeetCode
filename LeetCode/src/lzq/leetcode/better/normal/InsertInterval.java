@@ -84,6 +84,7 @@ public class InsertInterval {
 	/**
 	 * @param args
 	 */
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Interval i1 = new Interval(0, 5);

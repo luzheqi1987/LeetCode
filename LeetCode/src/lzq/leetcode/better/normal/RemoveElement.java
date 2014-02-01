@@ -1,6 +1,5 @@
 package lzq.leetcode.better.normal;
 
-import java.util.ArrayList;
 
 public class RemoveElement {
 	/**
