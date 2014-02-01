@@ -1,40 +1,45 @@
-package lzq.leetcode;
+package lzq.leetcode.initial.normal;
 
 import java.util.ArrayList;
 
 public class Triangle {
+	/**
+	 * Given a triangle, find the minimum path sum from top to bottom. Each step
+	 * you may move to adjacent numbers on the row below.
+	 * 
+	 * For example, given the following triangle [ [2], [3,4], [6,5,7],
+	 * [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 + 3 +
+	 * 5 + 1 = 11).
+	 * 
+	 * Note: Bonus point if you are able to do this using only O(n) extra space,
+	 * where n is the total number of rows in the triangle.
+	 * 
+	 * @param triangle
+	 * @return
+	 */
 	public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
 		// Start typing your Java solution below
 		// DO NOT write main() function
 		if (null == triangle || 0 == triangle.size()) {
 			return 0;
 		}
-
-		int layerNumer = triangle.size();
-		ArrayList<Integer> tmpLengths = new ArrayList<Integer>();
-		tmpLengths.add(triangle.get(0).get(0));
-		for (int i = 1; i < layerNumer; i++) {
-			ArrayList<Integer> layer = triangle.get(i);
-			layer.set(0, layer.get(0) + tmpLengths.get(0));
-			for (int k = 1; k < layer.size(); k++) {
-				if (k == layer.size() - 1) {
-					layer.set(k, layer.get(k) + tmpLengths.get(k - 1));
+		int min = Integer.MAX_VALUE;
+		int[] mins = new int[triangle.size() + 1];
+		for (int i = 0; i < mins.length; i++) {
+			mins[i] = Integer.MAX_VALUE;
+		}
+		for (int i = 1; i < mins.length; i++) {
+			for (int j = i; j >= 1; j--) {
+				if (i == 1 && j == 1) {
+					mins[j] = triangle.get(i - 1).get(j - 1);
 				} else {
-					if (tmpLengths.get(k) > tmpLengths.get(k - 1)) {
-						layer.set(k, tmpLengths.get(k - 1) + layer.get(k));
-					} else {
-						layer.set(k, tmpLengths.get(k) + layer.get(k));
-					}
+					mins[j] = Math.min(mins[j], mins[j - 1])
+							+ triangle.get(i - 1).get(j - 1);
 				}
 			}
-			tmpLengths.clear();
-			tmpLengths.addAll(layer);
 		}
-		int min = tmpLengths.get(0);
-		for (int i = 1; i < layerNumer; i++) {
-			if (tmpLengths.get(i) < min) {
-				min = tmpLengths.get(i);
-			}
+		for (int i = 1; i < mins.length; i++) {
+			min = Math.min(min, mins[i]);
 		}
 		return min;
 	}

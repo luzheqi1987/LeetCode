@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import lzq.leetcode.UndirectedGraphNode;
+import lzq.leetcode.model.UndirectedGraphNode;
 
 public class CloneGraph {
 	/**

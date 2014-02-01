@@ -1,4 +1,4 @@
-package lzq.leetcode;
+package lzq.leetcode.initial.dfs;
 
 import java.util.ArrayList;
 
@@ -6,6 +6,21 @@ public class SudokuSolver {
 	private final static char[] nineNumbers = { '1', '2', '3', '4', '5', '6',
 			'7', '8', '9' };
 
+	/**
+	 * Write a program to solve a Sudoku puzzle by filling the empty cells.
+	 * 
+	 * Empty cells are indicated by the character '.'.
+	 * 
+	 * You may assume that there will be only one unique solution.
+	 * 
+	 * 
+	 * A sudoku puzzle...
+	 * 
+	 * 
+	 * ...and its solution numbers marked in red.
+	 * 
+	 * @param board
+	 */
 	public void solveSudoku(char[][] board) {
 		// IMPORTANT: Please reset any member data you declared, as
 		// the same Solution instance will be reused for each test case.

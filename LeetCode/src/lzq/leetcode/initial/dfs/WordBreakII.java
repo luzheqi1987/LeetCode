@@ -1,4 +1,4 @@
-package lzq.leetcode;
+package lzq.leetcode.initial.dfs;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +7,21 @@ import java.util.Map;
 import java.util.Set;
 
 public class WordBreakII {
+	/**
+	 * Given a string s and a dictionary of words dict, add spaces in s to
+	 * construct a sentence where each word is a valid dictionary word.
+	 * 
+	 * Return all such possible sentences.
+	 * 
+	 * For example, given s = "catsanddog", dict = ["cat", "cats", "and",
+	 * "sand", "dog"].
+	 * 
+	 * A solution is ["cats and dog", "cat sand dog"].
+	 * 
+	 * @param s
+	 * @param dict
+	 * @return
+	 */
 	public ArrayList<String> wordBreak(String s, Set<String> dict) {
 		// IMPORTANT: Please reset any member data you declared, as
 		// the same Solution instance will be reused for each test case.

@@ -1,6 +1,15 @@
-package lzq.leetcode;
+package lzq.leetcode.initial.normal;
 
 public class ValidSudoku {
+	/**
+	 * Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+	 * 
+	 * The Sudoku board could be partially filled, where empty cells are filled
+	 * with the character '.'.
+	 * 
+	 * @param board
+	 * @return
+	 */
 	public boolean isValidSudoku(char[][] board) {
 		// IMPORTANT: Please reset any member data you declared, as
 		// the same Solution instance will be reused for each test case.

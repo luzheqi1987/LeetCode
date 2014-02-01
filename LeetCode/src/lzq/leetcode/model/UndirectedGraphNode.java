@@ -1,4 +1,4 @@
-package lzq.leetcode;
+package lzq.leetcode.model;
 
 import java.util.ArrayList;
 

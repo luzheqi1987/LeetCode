@@ -1,8 +1,18 @@
-package lzq.leetcode;
+package lzq.leetcode.initial.qs;
 
 import java.util.Stack;
 
 public class ValidParentheses {
+	/**
+	 * Given a string containing just the characters '(', ')', '{', '}', '[' and
+	 * ']', determine if the input string is valid.
+	 * 
+	 * The brackets must close in the correct order, "()" and "()[]{}" are all
+	 * valid but "(]" and "([)]" are not.
+	 * 
+	 * @param s
+	 * @return
+	 */
 	public boolean isValid(String s) {
 		// IMPORTANT: Please reset any member data you declared, as
 		// the same Solution instance will be reused for each test case.
