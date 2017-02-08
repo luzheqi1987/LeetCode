@@ -111,8 +111,8 @@ public class LFUCache {
             this.count = count;
             keys = new LinkedHashSet<Integer>();
             prev = next = null;
-        }
-    }
+		}
+	}
 
 	public static void main(String[] args) {
 		LFUCache cache = new LFUCache(10);
