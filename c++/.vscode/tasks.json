@@ -9,7 +9,7 @@
                 "${file}",
                 "-std=c++11",
                 "-o",
-                "${fileDirname}/out/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.out"
             ],
             "options": {
                 "cwd": "/usr/bin"
