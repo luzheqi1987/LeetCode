@@ -4,3 +4,4 @@ LeetCode/LeetCode.iml
 c++/out
 c++/*.dSYM
 c++/*.out
+c++/.vscode/ipch
